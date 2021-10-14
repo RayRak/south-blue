@@ -27,7 +27,7 @@
  <p>「start」を押して計測を開始し、色が変化したら「stop」を押してください</p>
 <p>「stop」を押した後に表示された数字をFormsに記入してください。</p>
 
-  <button onclick="start()" type="button" class="btn btn-dark btn-lg">Start</button>
+  <button onclick="start()" type="button" id="ogi" class="btn btn-dark btn-lg">Start</button>
   <button onclick="stop()" type="button" class="btn btn-dark btn-lg">Stop</button>
   <canvas id="mikami"width="800"height="600"style="background-color: blue;"></canvas>
   <script language="javascript" type="text/javascript">
@@ -36,6 +36,7 @@
   function start() {
     s_time = new Date();
     setTimeout("syori()", 10000);
+    document.getElementById("ogi").disabled = true;
   }
   
   function syori(){
