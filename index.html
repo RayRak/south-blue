@@ -35,7 +35,7 @@
 
   function start() {
     s_time = new Date();
-    setTimeout("syori()", 10000);
+    setTimeout("syori()", 23000);
     document.getElementById("ogi").disabled = true;
   }
   
@@ -53,7 +53,7 @@
     if(s_time == null) {
       console.log("開始 -> 終了の順に押してください");
     } else {
-      var diff = e_time.getTime() - s_time.getTime();
+      var diff = e_time.getTime() - s_time.getTime() - 23000;
       document.write("経過時間:", diff);
     }
   }
